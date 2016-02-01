@@ -11,9 +11,14 @@ public abstract class StartablesHelper {
 
 	}
 
-	public static void runStartables(Collection<? extends Startable> sources) {
+	/**
+	 * Starts a {@link Collection} of {@link Startable}s.
+	 * 
+	 * @param startables the {@link Collection} of {@link Startable}s to start.
+	 */
+	public static void runStartables(Collection<? extends Startable> startables) {
 
-		sources.forEach(x -> x.doStart());
+		startables.forEach(x -> x.doStart());
 	}
 	
 }

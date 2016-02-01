@@ -18,7 +18,10 @@ public class StartablesHelperTest {
 
 		StartablesHelper.runStartables(list);
 		
-		list.forEach(x -> assertTrue(x.isStarted()));
+		for (TestStartable testStartable : list) {
+			
+			assertTrue(testStartable.isStarted());
+		}
 	}
 
 }

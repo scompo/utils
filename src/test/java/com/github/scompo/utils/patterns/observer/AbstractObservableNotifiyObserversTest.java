@@ -48,7 +48,7 @@ public class AbstractObservableNotifiyObserversTest {
 		
 		for (TestObserver observer : observers) {
 			
-			assertEquals(CHANGED_DATA, observer.getDato());
+			assertEquals(CHANGED_DATA, observer.getData());
 		}
 	}
 

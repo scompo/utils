@@ -7,7 +7,7 @@ import com.github.scompo.utils.patterns.observer.Observer;
 
 public class TestObserver implements Observer<String>{
 
-	private String dato = Constants.OLD_DATA;
+	private String data = Constants.OLD_DATA;
 
 	private Observable<String> observable;
 
@@ -21,15 +21,15 @@ public class TestObserver implements Observer<String>{
 
 		assertEquals(this.observable, observable);
 
-		setDato(param);
+		setData(param);
 	}
 
-	public String getDato() {
-		return dato;
+	public String getData() {
+		return data;
 	}
 
-	public void setDato(String dato) {
-		this.dato = dato;
+	public void setData(String data) {
+		this.data = data;
 	}
 
 }

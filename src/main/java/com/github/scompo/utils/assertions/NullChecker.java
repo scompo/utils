@@ -22,14 +22,17 @@ public abstract class NullChecker {
 	}
 
 	/**
-	 * Returns <code>false</code> if the object passed is null, <code>true</code> otherwise.
+	 * Uses {@link NullChecker#isNull(Object)} to return <code>false</code> if the object passed is null,
+	 * <code>true</code> otherwise.
 	 * 
 	 * @param obj the object to test.
 	 * 
 	 * @return <code>false</code> if the object passed is null, <code>true</code> otherwise.
+	 * 
+	 * @see NullChecker#isNull(Object)
 	 */
 	public static <T> boolean isNotNull(T obj) {
 
-		return false;
+		return !isNull(obj);
 	}
 }

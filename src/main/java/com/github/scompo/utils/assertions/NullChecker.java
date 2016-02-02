@@ -18,7 +18,7 @@ public abstract class NullChecker {
 	 */
 	public static <T> boolean isNull(T obj) {
 
-		return false;
+		return obj == null;
 	}
 
 	/**

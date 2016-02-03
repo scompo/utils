@@ -7,7 +7,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-public class NullCheckerTests {
+public class NullCheckerTest {
 
 	private static final Object NULL_OBJ = null;
 

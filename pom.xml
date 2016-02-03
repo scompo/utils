@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.scompo.utils</groupId>
 	<artifactId>utils</artifactId>
-	<version>1.0.4</version>
+	<version>1.0.5</version>
 	<name>${project.groupId}:${project.artifactId}</name>
 	<description>Utility classes</description>
 	<url>https://github.com/scompo/utils</url>

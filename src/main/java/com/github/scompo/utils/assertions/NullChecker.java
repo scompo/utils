@@ -14,6 +14,8 @@ public abstract class NullChecker {
 	 * 
 	 * @param obj the object to test.
 	 * 
+	 * @param <T> class of the object to check.
+	 * 
 	 * @return <code>true</code> if the object passed is null, <code>false</code> otherwise.
 	 */
 	public static <T> boolean isNull(T obj) {
@@ -26,6 +28,8 @@ public abstract class NullChecker {
 	 * <code>true</code> otherwise.
 	 * 
 	 * @param obj the object to test.
+	 * 
+	 * @param <T> class of the object to check.
 	 * 
 	 * @return <code>false</code> if the object passed is null, <code>true</code> otherwise.
 	 * 

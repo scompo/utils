@@ -11,3 +11,5 @@ Utility stuff
 [![Build Status](https://travis-ci.org/scompo/utils.svg?branch=master)](https://travis-ci.org/scompo/utils)
 
 [![Codacy Badge](https://api.codacy.com/project/badge/grade/6f33b0084136472bae950c22d15dfbc7)](https://www.codacy.com/app/scompo/utils)
+
+[![Coverage Status](https://coveralls.io/repos/github/scompo/utils/badge.svg?branch=master)](https://coveralls.io/github/scompo/utils?branch=master)

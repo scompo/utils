@@ -5,7 +5,7 @@ import java.util.Collection;
 /**
  * Helper methods for {@link Startable}.
  */
-public abstract class StartablesHelper {
+public class StartablesHelper {
 
 	private StartablesHelper() {
 

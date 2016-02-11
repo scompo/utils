@@ -3,7 +3,7 @@ package com.github.scompo.utils.assertions;
 /**
  * Utilities to tests on <code>null</code>.
  */
-public abstract class NullChecker {
+public class NullChecker {
 
 	private NullChecker() {
 

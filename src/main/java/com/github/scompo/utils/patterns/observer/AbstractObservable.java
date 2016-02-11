@@ -51,11 +51,6 @@ public class AbstractObservable<T> implements Observable<T> {
 		return new ArrayList<Observer<T>>();
 	}
 
-	@Override
-	public String toString() {
-		return "AbstractObservable [observers=" + observers + "]";
-	}
-
 	public Collection<Observer<T>> getObservers() {
 		return observers;
 	}

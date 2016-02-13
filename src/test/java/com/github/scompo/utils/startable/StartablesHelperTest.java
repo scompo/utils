@@ -7,7 +7,6 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.github.scompo.utils.common.PrivateConstructorTestHelper;
 import com.github.scompo.utils.startable.commons.TestStartable;
 
 public class StartablesHelperTest {
@@ -23,12 +22,6 @@ public class StartablesHelperTest {
 
 			assertTrue(testStartable.isStarted());
 		}
-	}
-
-	@Test
-	public void testConstructorIsPrivate() throws Exception {
-
-		PrivateConstructorTestHelper.testUtilClassPrivateConstructor(StartablesHelper.class);
 	}
 
 }

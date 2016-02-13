@@ -7,8 +7,6 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import com.github.scompo.utils.common.PrivateConstructorTestHelper;
-
 public class NullCheckerTest {
 
 	private static final Object NULL_OBJ = null;
@@ -28,11 +26,4 @@ public class NullCheckerTest {
 		assertFalse(isNotNull(NULL_OBJ));
 		assertTrue(isNotNull(NOT_NULL_OBJ));
 	}
-	
-	@Test
-	public void testConstructorIsPrivate() throws Exception{
-		
-		PrivateConstructorTestHelper.testUtilClassPrivateConstructor(NullChecker.class);
-	}
-
 }

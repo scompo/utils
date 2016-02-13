@@ -19,12 +19,12 @@ import com.github.scompo.utils.startable.StartablesHelper;
 @RunWith(Parameterized.class)
 public class PrivateConstructorTest {
 
+	private Class<?> clazz;
+	
 	@Parameters(name = "{index} : {0} has a private constructor")
 	public static Collection<Object[]> data() {
 		return Arrays.asList(new Object[][] { { StartablesHelper.class }, { NullChecker.class } });
 	}
-
-	private Class<?> clazz;
 
 	public PrivateConstructorTest(Class<?> clazz) {
 

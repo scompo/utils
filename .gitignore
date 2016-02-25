@@ -4,6 +4,12 @@
 .project
 .settings
 
+# Gradle stuff
+
+.gradle
+build
+bin
+
 # Maven target.
 
 target/

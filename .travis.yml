@@ -1,5 +1,7 @@
 language: java
 jdk:
   - oraclejdk8
+before_install:
+ - chmod +x gradlew
 after_success:
-  - mvn clean test jacoco:report coveralls:report
+ - ./gradlew jacocoTestReport coveralls

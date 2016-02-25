@@ -1,4 +1,9 @@
-apply plugin: 'java'
+plugins{
+	
+	id 'java'
+	id 'jacoco'
+    id 'com.github.kt3k.coveralls' version '2.6.3'
+}
 
 group = 'com.github.scompo.utils'
 version = '1.0.6'
@@ -31,3 +36,9 @@ artifacts {
     archives javadocJar
 }
 
+jacocoTestReport {
+    reports {
+        xml.enabled = true 
+        html.enabled = true
+    }
+}

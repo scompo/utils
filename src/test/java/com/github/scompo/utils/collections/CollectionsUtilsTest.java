@@ -20,6 +20,7 @@ public class CollectionsUtilsTest {
 	private static final List<Long> COLLECTION_WITH_ONLY_ONE_ELEMENT = Arrays.asList(FIRST_ELEMENT);
 	private static final List<Long> COLLECTION_WITH_MORE_THAN_ONE_ELEMENT = Arrays.asList(FIRST_ELEMENT, SECOND_ELEMENT);
 	private static final Collection<Object> EMPTY_COLLECTION = Collections.emptyList();
+	private static final Collection<Object> NULL_COLLECTION = null;
 	
 	@Rule
 	public ExpectedException thrown = ExpectedException.none();
@@ -34,7 +35,7 @@ public class CollectionsUtilsTest {
 	public void getOnlyElementShouldThrowIllegalArgumentExceptionIfTheCollectionHasMoreThanOneElement() {
 		
 		thrown.expect(IllegalArgumentException.class);
-		thrown.expectMessage("Expected one element, found: 2");
+		thrown.expectMessage("Expected 1 element, found: 2");
 		
 		getOnlyElement(COLLECTION_WITH_MORE_THAN_ONE_ELEMENT);
 	}
@@ -43,9 +44,17 @@ public class CollectionsUtilsTest {
 	public void getOnlyElementShouldThrowIllegalArgumentExceptionIfTheCollectionHasNoElements() {
 		
 		thrown.expect(IllegalArgumentException.class);
-		thrown.expectMessage("Expected one element, found: 0");
+		thrown.expectMessage("Expected 1 element, found: 0");
 		
 		getOnlyElement(EMPTY_COLLECTION);
+	}
+	
+	@Test
+	public void getOnlyElementShouldThrowNullPointerExceptionIfTheCollectionIsNull() {
+		
+		thrown.expect(NullPointerException.class);
+		
+		getOnlyElement(NULL_COLLECTION);
 	}
 
 }

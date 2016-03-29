@@ -14,16 +14,18 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 import com.github.scompo.utils.assertions.NullChecker;
+import com.github.scompo.utils.collections.CollectionsUtils;
 import com.github.scompo.utils.startable.StartablesHelper;
 
 @RunWith(Parameterized.class)
 public class PrivateConstructorTest {
 
 	private Class<?> clazz;
-	
+
 	@Parameters(name = "{index} : {0} has a private constructor")
 	public static Collection<Object[]> data() {
-		return Arrays.asList(new Object[][] { { StartablesHelper.class }, { NullChecker.class } });
+		return Arrays.asList(
+				new Object[][] { { StartablesHelper.class }, { NullChecker.class }, { CollectionsUtils.class } });
 	}
 
 	public PrivateConstructorTest(Class<?> clazz) {

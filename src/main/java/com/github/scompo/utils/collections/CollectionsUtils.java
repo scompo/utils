@@ -2,6 +2,9 @@ package com.github.scompo.utils.collections;
 
 import java.util.Collection;
 
+/**
+ * Utilities for {@link Collection}s handling.
+ */
 public class CollectionsUtils {
 
 	private CollectionsUtils() {
@@ -16,7 +19,7 @@ public class CollectionsUtils {
 	 * @return the only element of a {@link Collection}
 	 */
 	public static <T> T getOnlyElement(Collection<T> collection) {
-		
+
 		checkElementSize(collection, 1);
 
 		return collection.iterator().next();

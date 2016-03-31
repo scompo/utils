@@ -5,8 +5,14 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.attribute.FileAttribute;
 
+/**
+ * Utility methods for handling temporary files and directories.
+ */
 public class TempFileHelper {
 
+	/**
+	 * Temporary directory default prefix.
+	 */
 	public static final String DEFAULT_PREFIX = "temp";
 
 	private TempFileHelper() {

@@ -1,6 +1,9 @@
 package com.github.scompo.utils.helpers;
 
-import static com.github.scompo.utils.helpers.TempFileHelper.*;
+import static com.github.scompo.utils.helpers.TempFileHelper.DEFAULT_PREFIX;
+import static com.github.scompo.utils.helpers.TempFileHelper.DEFAULT_SUFFIX;
+import static com.github.scompo.utils.helpers.TempFileHelper.createTempDirectory;
+import static com.github.scompo.utils.helpers.TempFileHelper.createTempFile;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
@@ -11,6 +14,9 @@ import org.junit.Test;
 
 public class TempFileHelperTest {
 
+	private static final String TEST_SUFFIX = "suffix";
+	private static final String TEST_PREFIX = "prefix";
+
 	@Test
 	public void testCreateTempDirectoryNoPrefix() throws IOException {
 
@@ -20,19 +26,19 @@ public class TempFileHelperTest {
 
 		assertTrue(tempDirectory.exists());
 		assertTrue(tempDirectory.isDirectory());
-		assertTrue(tempDirectory.getName().contains(TempFileHelper.DEFAULT_PREFIX));
+		assertTrue(tempDirectory.getName().contains(DEFAULT_PREFIX));
 	}
 
 	@Test
 	public void testCreateTempDirectoryWithPrefix() throws IOException {
 
-		File tempDirectory = createTempDirectory("prefix");
+		File tempDirectory = createTempDirectory(TEST_PREFIX);
 
 		assertNotNull(tempDirectory);
 
 		assertTrue(tempDirectory.exists());
 		assertTrue(tempDirectory.isDirectory());
-		assertTrue(tempDirectory.getName().contains("prefix"));
+		assertTrue(tempDirectory.getName().contains(TEST_PREFIX));
 	}
 
 	@Test
@@ -44,21 +50,21 @@ public class TempFileHelperTest {
 
 		assertTrue(tempFile.exists());
 		assertTrue(tempFile.isFile());
-		assertTrue(tempFile.getName().contains(TempFileHelper.DEFAULT_PREFIX));
-		assertTrue(tempFile.getName().contains(TempFileHelper.DEFAULT_SUFFIX));
+		assertTrue(tempFile.getName().contains(DEFAULT_PREFIX));
+		assertTrue(tempFile.getName().contains(DEFAULT_SUFFIX));
 	}
 
 	@Test
 	public void testCreateTempFileWithPrefix() throws IOException {
 
-		File tempFile = createTempFile("prefix", "suffix");
+		File tempFile = createTempFile(TEST_PREFIX, TEST_SUFFIX);
 
 		assertNotNull(tempFile);
 
 		assertTrue(tempFile.exists());
 		assertTrue(tempFile.isFile());
-		assertTrue(tempFile.getName().contains("prefix"));
-		assertTrue(tempFile.getName().contains("suffix"));
+		assertTrue(tempFile.getName().contains(TEST_PREFIX));
+		assertTrue(tempFile.getName().contains(TEST_SUFFIX));
 	}
 
 }

@@ -1,5 +1,7 @@
 package com.github.scompo.utils.assertions;
 
+import static com.github.scompo.utils.assertions.NullChecker.*;
+
 /**
  * Utilities for parameters validation.
  */
@@ -20,7 +22,7 @@ public class Validation {
 	 */
 	public static <T> void validateNotNull(T obj, String message) throws IllegalArgumentException {
 
-		if (obj == null) {
+		if (isNull(obj)) {
 
 			throw new IllegalArgumentException(message);
 		}

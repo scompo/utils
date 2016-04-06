@@ -10,11 +10,12 @@ public class Validation {
 	}
 
 	/**
-	 * Throws an {@link IllegalArgumentException} with the supplied message if the passed object is <code>null</code>.
+	 * Throws an {@link IllegalArgumentException} with the supplied message if the object to valdate is <code>null</code>.
 	 * 
 	 * @param obj the object to validate.
+	 * @param <T> the class of the supplied object, implicit.
 	 * @param message the message for the {@link IllegalArgumentException} to throw.
-	 * @throws IllegalArgumentException with the supplied message if the passed object is <code>null</code>
+	 * @throws IllegalArgumentException with the supplied message if the object to valdate is <code>null</code>.
 	 */
 	public static <T> void validateNotNull(T obj, String message) throws IllegalArgumentException {
 

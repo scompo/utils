@@ -10,7 +10,8 @@ public class Validation {
 	}
 
 	/**
-	 * Throws an {@link IllegalArgumentException} with the supplied message if the object to valdate is <code>null</code>.
+	 * Throws an {@link IllegalArgumentException} with the supplied message if the object to valdate is
+	 * <code>null</code>.
 	 * 
 	 * @param obj the object to validate.
 	 * @param <T> the class of the supplied object, implicit.

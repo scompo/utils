@@ -15,6 +15,7 @@ public class CollectionsUtils {
 	 * Returns the only element of a {@link Collection}.
 	 * 
 	 * @param collection the {@link Collection} to get the only element from.
+	 * @param <T> the type of the {@link Collection}.
 	 * 
 	 * @return the only element of a {@link Collection}
 	 */
@@ -29,6 +30,7 @@ public class CollectionsUtils {
 	 * Helper method to check elements size of a {@link Collection}.
 	 * 
 	 * @param collection the {@link Collection} to check for size.
+	 * @param <T> the type of the {@link Collection}.
 	 * 
 	 * @param numberOfElements the expected number of elements.
 	 */
